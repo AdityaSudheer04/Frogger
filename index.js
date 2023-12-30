@@ -474,15 +474,15 @@ let timerIdBranch = setInterval(()=>{
         setTimeout(()=>
         {
             moveObstacleLeft(branch2)
-        },carTimeout)
+        },4000)
         setTimeout(()=>
         {
             moveObstacleLeft(branch3)
-        },2*carTimeout)
+        },2*4000)
         setTimeout(()=>
         {
             moveObstacleLeft(branch4)
-        },3*carTimeout)
+        },3*4000)
        
         
 },15)
@@ -794,8 +794,9 @@ function stop()
     clearInterval(timerIdBigLog)
     clearInterval(timerIdBranch)
     // clearInterval(timerIdWon)
-    clearTimeout(timerIDTimeout)
+    // clearTimeout(timerIDTimeout)
     // frogDisplay.style.b = none;
+    clearInterval(timerIdDll)
     document.removeEventListener('keydown',moveFrog)
 }
 
@@ -882,6 +883,25 @@ function fleaEater()
     
 }
 
+function drownLastLane(){
+    if(frogCurrentPosition[1] > 47.5 + 45 * 8)
+    {
+        if((frogCurrentPosition[0] + frogWidth/2 < window.innerWidth*0.825 &&
+        frogCurrentPosition[0] + frogWidth/2 > 0.675*window.innerWidth) ||
+        (frogCurrentPosition[0] + frogWidth/2 < window.innerWidth*0.6 &&
+        frogCurrentPosition[0] + frogWidth/2 > window.innerWidth*0.45) ||
+        (frogCurrentPosition[0] + frogWidth/2 < window.innerWidth*0.375 &&
+        frogCurrentPosition[0] + frogWidth/2 > window.innerWidth*0.225) ||
+        (frogCurrentPosition[0] + frogWidth/2 < window.innerWidth*0.15)
+        )
+        {
+            alert('Frog Drowned. Reload to play again.')
+            stop();
+        }
+    }
+}
+let timerIdDll = setInterval(drownLastLane,10)
+
 let timerIdFlea = setInterval(fleaEater,10)
 
 
@@ -906,9 +926,7 @@ function timerDecrease()
         stop();
     }
 }
-let timerIDTimeout = setTimeout(() => {
-    let timerIdTimer = setInterval(timerDecrease,200)
-}, 8000);
+
 
 
 startButton.addEventListener('click', () =>
@@ -916,7 +934,9 @@ startButton.addEventListener('click', () =>
     startScreen.style.display = 'none';
 
     
-
+    let timerIDTimeout = setTimeout(() => {
+        let timerIdTimer = setInterval(timerDecrease,200)
+    }, 8000);
     const buffer = document.createElement('div');
     screen.appendChild(buffer);
     buffer.style.width = '100%';
