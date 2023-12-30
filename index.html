@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Frogger
+        </title>
+        <link rel = "stylesheet" href = "styles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id = 'screen'>
+            <div class = 'board'>
+                <div class = "levels" id = "finish-line">
+                    <div class = 'waterLand' id = 'waterOne'></div>
+                    <div class = 'fleas' id = 'flea4'></div>
+                    <div class = 'waterLand' id = 'waterTwo'></div>
+                    <div class = 'fleas' id = 'flea3'></div>
+                    <div class = 'waterLand' id = 'waterThree'></div>
+                    <div class = 'fleas' id = 'flea2'></div>
+                    <div class = 'waterLand' id = 'waterFour'></div>
+                    <div class = 'fleas' id = 'flea1'></div>
+                </div>
+                <div class = "levels" id = "water">
+                    <div class = "waterLanes" id = "wlaneFour">
+                        <div class = 'bigLog' id = 'bigLog1'></div>
+                        <div class = 'bigLog' id = 'bigLog2'></div>
+                        <div class = 'bigLog' id = 'bigLog3'></div>
+                        <div class = 'bigLog' id = 'bigLog4'></div>
+                        <div class = 'bigLog' id = 'bigLog5'></div>
+                        <div class = 'bigLog' id = 'bigLog6'></div>
+                        <div class = 'bigLog' id = 'bigLog7'></div>
+                    </div>
+                    <div class = "waterLanes" id = "wlaneThree">
+                        <div class = 'log' id = 'log1'></div>
+                        <div class = 'log' id = 'log2'></div>
+                        <div class = 'log' id = 'log3'></div>
+                        <div class = 'log' id = 'log4'></div>
+                        <div class = 'log' id = 'log5'></div>
+                    </div>
+                    <div class = "waterLanes" id = "wlaneTwo">
+                        <div class = 'branch' id = 'branch1'></div>
+                        <div class = 'branch' id = 'branch2'></div>
+                        <div class = 'branch' id = 'branch3'></div>
+                        <div class = 'branch' id = 'branch4'></div>
+                    </div>
+                    <div class = "waterLanes" id = "wlaneOne">
+                        <div class = 'twig' id = 'twig1'></div>
+                        <div class = 'twig' id = 'twig2'></div>
+                        <div class = 'twig' id = 'twig3'></div>
+                        <div class = 'twig' id = 'twig4'></div>
+                        <div class = 'twig' id = 'twig5'></div>
+                        <div class = 'twig' id = 'twig6'></div>
+                    </div>
+                </div>
+                <div class = "levels" id = 'grass'></div>
+                <div class = "levels" id = 'road'>
+                    <div class = "roadLanes" id = "laneFour">
+                        <div class = 'truck' id = 'truck1'></div>
+                        <div class = 'truck' id = 'truck2'></div>
+                        <div class = 'truck' id = 'truck3'></div>
+                        <div class = 'truck' id = 'truck4'></div>
+                        <div class = 'truck' id = 'truck5'></div>
+                        <div class = 'truck' id = 'truck6'></div>
+                        <div class = 'truck' id = 'truck7'></div>
+                    </div>
+                    <div class = "roadLanes" id = "laneThree">
+                        <div class = 'bus' id = 'bus1'></div>
+                        <div class = 'bus' id = 'bus2'></div>
+                        <div class = 'bus' id = 'bus3'></div>
+                        <div class = 'bus' id = 'bus4'></div>
+                        <div class = 'bus' id = 'bus5'></div>
+                    </div>
+                    <div class = "roadLanes" id = "laneTwo">
+                        <div class = 'cars' id = 'car1'></div>
+                        <div class = 'cars' id = 'car2'></div>
+                        <div class = 'cars' id = 'car3'></div>
+                        <div class = 'cars' id = 'car4'></div>
+                    </div>
+                    <div class = "roadLanes" id = "laneOne">
+                        <div class = 'SUV' id = 'SUV1'></div>
+                        <div class = 'SUV' id = 'SUV2'></div>
+                        <div class = 'SUV' id = 'SUV3'></div>
+                        <div class = 'SUV' id = 'SUV4'></div>
+                        <div class = 'SUV' id = 'SUV5'></div>
+                        <div class = 'SUV' id = 'SUV6'></div>
+                        
+                    </div>
+                </div>
+                <div class = "levels" id = 'start-line'></div>
+            </div>
+            <div class = 'invisible'></div>
+            <div class = 'startScreen'>
+                <h2>Welcome to Frogger</h2>
+                <button id = 'startButton'>Start</button>
+
+                <h2>Rules</h2>
+                <ul>
+                    <li>Catch the flies as quick as possible</li>
+                    <li>The frog can die if it collides with the vehicle</li>
+                    <li>The frog can drown in water</li>
+                    <li>The frog can stay on objects floating in water</li>
+                    <li>Move the frog using arrow keys</li>
+                </ul>
+                <div></div>
+            </div>
+            
+        </div>
+            <div id = "timer">
+            <div id = 'timerDisplay' style="padding-right: 2%;">Timer: </div>
+            <div id = 'timerBar'></div>
+        
+        </div>
+        <div id = 'scoreBox'>Score:<span id = 'score'>0</span></div>
+
+        <script src = "index.js"></script>    
+    </body>
+</html>

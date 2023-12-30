@@ -1,0 +1,248 @@
+body
+{
+    margin: 0px;
+    background-color: #28282B;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+#screen
+{
+    width: 100%;
+    height: 495px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #28282B; */
+}
+
+.startScreen
+{
+    position: absolute;
+    width: 90%;
+    height: 495px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: larger;
+    color:greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #28282B;
+}
+
+#startButton{
+    background-color: greenyellow;
+    color:white;
+    width:15%;
+    height: 50px;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: larger;
+}
+
+
+
+.invisible
+{
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 10%;
+    height: 495px;
+    background-color: #28282B;
+}
+
+.board
+{
+    position:absolute;
+    margin: 0;
+    /* border: 2px solid yellow; */
+    width:90%;
+    background-color: white;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#water
+{
+    background-image: url(images/water.webp);
+}
+
+#road
+{
+    background-image: url(images/road.jpg);
+    background-size: cover;
+}
+
+#grass
+{
+    height:45px;
+    background-image: url(images/grass.jpeg);
+
+    
+}
+#start-line
+{
+    background-image: url(images/grass.jpeg);
+}
+#finish-line
+{
+    background-image: url(images/grass.jpeg);
+    display: flex;
+    /* justify-content: center; */
+
+}
+
+.cars /*truck image*/
+{
+    width: 10%;
+    height: 40px;
+    position:absolute;
+    background-image: url(images/truck.png);
+    background-size: cover;
+    left: -16.67%;
+}
+
+.truck /*car image*/
+{
+    width: 5%;
+    height: 40px;
+    position:absolute;
+    background-image: url(images/car.png);
+    background-size: cover;
+    left: -50%;
+}
+
+.SUV
+{
+    width: 6%;
+    height: 40px;
+    position:absolute;
+    background-image: url(images/Suv.png);
+    background-size: cover;
+    right: -10%;
+}
+
+.bus
+{
+    width: 8%;
+    height: 40px;
+    position:absolute;
+    background-image: url(images/bus.png);
+    background-size: cover;
+    right: -8%;
+}
+
+.bigLog
+{
+    width: 5%;
+    height: 45px;
+    position: absolute;
+    background-image: url('images/bigLog.png');
+    background-size: cover;
+    left: -10%;
+}
+
+.log
+{
+    width: 7%;
+    height: 45px;
+    position: absolute;
+    background-image: url('images/crocOp.png');
+    background-size: cover;
+    right: -10%;
+}
+
+
+
+.branch
+{
+    width: 10%;
+    height: 45px;
+    position: absolute;
+    background-image: url('images/croc.png');
+    background-size: cover;
+    left: -10%;
+}
+
+
+.twig
+{
+    width: 6%;
+    height: 45px;
+    position: absolute;
+    background-image: url('images/bigLog.png');
+    background-size: cover;
+    right: -10%;
+}
+
+
+
+.levels
+{
+    /* position: relative; */
+    /* border: 1px solid brown; */
+    width: 100%;  
+}
+
+
+
+.frogdisplay
+{
+    position: absolute;
+    background-image: url('images/frog.png');
+    background-size: cover;
+}
+
+
+.roadLanes
+{
+    height: 45px;;
+}
+
+.waterLanes
+{
+    height: 45px;;
+}
+
+
+#timer
+{
+    width: 74.68%;
+    height: 60px;
+    display: flex;
+    background-color: #28282B;
+    
+    color: white;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 10%;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: large;
+}
+
+#timerBar
+{
+    height: 18px;   
+}
+
+#scoreBox
+{
+    width: 100%;
+    height: 60px;
+    background-color: #28282B;
+    display: flex;
+    justify-content: center;
+    color: white;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: large;
+    align-items: center;
+}
+
+.fleas
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
